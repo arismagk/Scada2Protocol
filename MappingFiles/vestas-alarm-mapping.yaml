@@ -1,0 +1,55 @@
+version: "1.1"
+stream: "T1.F02"   # Alarm/Event
+
+fields:
+  Unit:
+    tag: turbine_id
+    type: string
+
+  Serial no.:
+    tag: turbine_serial
+    type: string
+
+  Code:
+    tag: alarm_code
+    type: int
+
+  Description:
+    tag: alarm_description
+    type: string
+
+  Detected:
+    tag: detected_time
+    type: datetime
+    format: "D/M/YYYY H:mm:ss a"
+    timezone: "Europe/Athens"
+
+  Device ack.:
+    tag: acknowledged_time
+    type: datetime
+    format: "D/M/YYYY H:mm:ss a"
+    timezone: "Europe/Athens"
+
+  Reset/Run:
+    tag: reset_time
+    type: datetime
+    format: "D/M/YYYY H:mm:ss.SSS"
+    timezone: "UTC"
+
+  Duration:
+    tag: duration_sec
+    type: duration
+    format: "H:mm:ss"
+
+  Event type:
+    tag: event_type
+    type: string
+
+  Severity:
+    tag: severity
+    type: int
+    default: 0
+
+  Remark:
+    tag: remark
+    type: string

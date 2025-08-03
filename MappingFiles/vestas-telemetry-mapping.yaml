@@ -1,0 +1,120 @@
+# version 1.0 → protocol v1.1
+version: "1.1"
+stream: "T1.F01"   # Telemetry
+
+fields:
+  # common timestamp
+  PCTimeStamp:
+    tag: timestamp
+    type: datetime
+    format: "D/M/YYYY H:mm"
+    timezone: "Europe/Athens"
+
+  # for each turbine we emit one Telemetry message per row
+  WTG01_Production LatestAverage Total Active Power Avg. (1):
+    tag: active_power
+    type: float
+    unit: kW
+    turbine_id: WTG01
+
+  WTG02_Production LatestAverage Total Active Power Avg. (2):
+    tag: active_power
+    type: float
+    unit: kW
+    turbine_id: WTG02
+
+  WTG03_Production LatestAverage Total Active Power Avg. (3):
+    tag: active_power
+    type: float
+    unit: kW
+    turbine_id: WTG03
+
+  WTG01_Ambient WindSpeed Avg. (4):
+    tag: wind_speed
+    type: float
+    unit: m/s
+    turbine_id: WTG01
+
+  WTG02_Ambient WindSpeed Avg. (5):
+    tag: wind_speed
+    type: float
+    unit: m/s
+    turbine_id: WTG02
+
+  WTG03_Ambient WindSpeed Avg. (6):
+    tag: wind_speed
+    type: float
+    unit: m/s
+    turbine_id: WTG03
+
+  WTG01_Ambient WindDir Absolute Avg. (7):
+    tag: wind_dir
+    type: float
+    unit: deg
+    turbine_id: WTG01
+
+  WTG02_Ambient WindDir Absolute Avg. (8):
+    tag: wind_dir
+    type: float
+    unit: deg
+    turbine_id: WTG02
+
+  WTG03_Ambient WindDir Absolute Avg. (9):
+    tag: wind_dir
+    type: float
+    unit: deg
+    turbine_id: WTG03
+
+  WTG01_Ambient Temp. Avg. (10):
+    tag: temperature
+    type: float
+    unit: °C
+    turbine_id: WTG01
+
+  WTG02_Ambient Temp. Avg. (11):
+    tag: temperature
+    type: float
+    unit: °C
+    turbine_id: WTG02
+
+  WTG03_Ambient Temp. Avg. (12):
+    tag: temperature
+    type: float
+    unit: °C
+    turbine_id: WTG03
+
+  WTG01_HourCounters Average Run Avg. (13):
+    tag: run_hours
+    type: float
+    unit: h
+    turbine_id: WTG01
+
+  WTG02_HourCounters Average Run Avg. (14):
+    tag: run_hours
+    type: float
+    unit: h
+    turbine_id: WTG02
+
+  WTG03_HourCounters Average Run Avg. (15):
+    tag: run_hours
+    type: float
+    unit: h
+    turbine_id: WTG03
+
+  WTG01_HourCounters Average AlarmActive Avg. (16):
+    tag: alarm_hours
+    type: float
+    unit: h
+    turbine_id: WTG01
+
+  WTG02_HourCounters Average AlarmActive Avg. (17):
+    tag: alarm_hours
+    type: float
+    unit: h
+    turbine_id: WTG02
+
+  WTG03_HourCounters Average AlarmActive Avg. (18):
+    tag: alarm_hours
+    type: float
+    unit: h
+    turbine_id: WTG03

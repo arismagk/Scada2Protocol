@@ -1,0 +1,23 @@
+version: "1.1"
+stream: "T2.F01"   # Theoretical power curve
+
+fields:
+  Wind Speed Bin [m/s]:
+    tag: wind_speed_bin_ms
+    type: float
+    unit: m/s
+
+  Nominal Distribution (half m/s) [h/yr]:
+    tag: nominal_hours_per_year
+    type: float
+    unit: h/yr
+
+  Warranted Power Curve [kW]:
+    tag: warranted_power_kw
+    type: float
+    unit: kW
+
+  WPO [kWh/yr]:
+    tag: wpo_kwh_per_year
+    type: float
+    unit: kWh/yr
